@@ -2,12 +2,20 @@
 ## Introductory Project: Diagonal Sudoku Solver
 
 # Question 1 (Naked Twins)
-Q: How do we use constraint propagation to solve the naked twins problem?  
-A: *Student should provide answer here*
+Q: How do we use constraint propagation to solve the naked twins problem?
+A: The naked twins problem arises when two boxes in the same unit share the same two possible values. These boxes are
+referred as naked twins. Since there are only two identical options for two boxes, these options can't be used by any other
+box(apart from the twins)in the unit, otherwise one of the twins would end up with no possible value.
+Constraint propagation is then used by determining if a sudoku unit contains naked twins, and if it does, by propagating the
+value of the twins to the other boxes of that same unit. This is accomplished by removing the twins values from all other boxes
+in that unit.
+
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: *Student should provide answer here*
+A: Constraing propagation is used by creating two new units that further constrain the boxes that are
+present on the diagonal. Once a the value of a box in one of these two units is determined, the other potential values of
+other boxes in the same unit are updated.
 
 ### Install
 
